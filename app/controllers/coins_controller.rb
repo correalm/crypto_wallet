@@ -1,6 +1,11 @@
 class CoinsController < ApplicationController
   before_action :set_coin, only: %i[ show edit update destroy ]
 
+  # perguntar sobre isso. Como ter variáveis disponíveis a todas as rotas?
+  # def initialize
+  #   @teste = "Isto é um TESTE"
+  # end
+
   # GET /coins or /coins.json
   def index
     @coins = Coin.all

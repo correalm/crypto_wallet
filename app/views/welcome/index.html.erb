@@ -1,0 +1,20 @@
+<h1>Seja bem vindo</h1>
+
+<h2><%= @name %></h2>
+
+<h3>Aqui é outra forma de pegar a data -> Utilizando o helper l <%= l Time.now, format: :short %></h3>
+<h3>Seja bem vindo, hoje é dia <%= date_BR(Date.today) %></h3>
+
+<ul>
+  <li>
+    <a href="/coins">Cadastrar Moedas</a>
+  </li>
+  <li>
+  <%# utilizando o helper link_to -> 
+    Para ver o path da rota, utilizo o rails/info/routes do rails no browser (aula 46)
+  %>
+    <%= link_to "Cadastro de moedas", coins_path %>
+  </li>
+</ul>
+
+<p>Você está em ambiente de <strong><%= ambient_rails %></strong></p>
