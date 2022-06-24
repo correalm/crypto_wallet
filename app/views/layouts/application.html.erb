@@ -11,6 +11,12 @@
 
   <body>
   <h1>Cabeçalho</h1>
+    <span>
+      <%= link_to '🇧🇷', root_path(locale: "pt-BR")%>
+    </span>
+    <span>
+      <%= link_to '🇺🇸', '/?locale=en'%>
+    </span>
     <%= yield %>
     <%= link_to "HOME 🏠", root_path %>
   <p>Footer</p>

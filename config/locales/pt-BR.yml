@@ -1,0 +1,19 @@
+pt-BR:
+  hello: "Ola mundo"
+  activerecord:
+    models:
+      coin:
+        one: Moeda
+        other: Moedas
+      mining_type:
+        one: Tipo de Mineração
+        other: Tipos de Mineração
+    attributes:
+      coin:
+        description: Descrição
+        acronym: Sigla
+        url_image: Endereço da imagem
+        mining_type: Tipo de mineração
+      mining_type:
+        description: Descrição
+        acronym: Sigla

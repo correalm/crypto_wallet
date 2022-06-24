@@ -3,7 +3,8 @@
 <h2><%= @name %></h2>
 
 <h3>Aqui é outra forma de pegar a data -> Utilizando o helper l <%= l Time.now, format: :short %></h3>
-<h3>Seja bem vindo, hoje é dia <%= date_BR(Date.today) %></h3>
+<p>Idioma da aplicação: <strong><%= I18n.locale %></strong></p>
+<h3>Seja bem vindo, hoje é dia <%= l Date.today %></h3>
 
 <%# Usando um partial %>
 <%= render "menu" %>
