@@ -1,4 +1,6 @@
 class CoinsController < ApplicationController
+  layout "adm"
+
   before_action :set_coin, only: %i[ show edit update destroy ]
 
   # perguntar sobre isso. Como ter variáveis disponíveis a todas as rotas?
