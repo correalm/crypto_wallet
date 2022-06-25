@@ -1,4 +1,12 @@
 pt-BR:
+  welcome: "Seja bem vindo"
+  msg_entry: "Este é o Crypto Wallet, seu app para acompanhar moedas digitais"
+  msg_start: "Para começar selecione uma das opções abaixo"
+  btn_coins: "Moedas"
+  bnt_create_coin: "Nova moeda"
+  btn_types: "Tipos de mineração"
+  btn_create_type: "Novo tipo de mineração"
+  msg_environment: "Você está em ambiente de "
   hello: "Ola mundo"
   activerecord:
     models:

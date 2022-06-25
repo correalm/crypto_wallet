@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Coins</h1>
-
-<%# Para consultar o cookie %>
-<h2><%= cookies[:course] %></h2>
+<h1><%= @coins.model_name.human(count: @coins.count) %></h1>
 
 <%# Perguntar... %>
 <%#<h2><% = @teste</h2> %>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th><%= @coins.human_attribute_name(:description) %></th>
@@ -34,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Coin', new_coin_path %>
+<%= link_to t('bnt_create_coin'), new_coin_path, class: "btn btn-primary btn-lg" %>

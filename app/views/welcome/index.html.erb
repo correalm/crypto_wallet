@@ -1,12 +1,19 @@
-<h1>Seja bem vindo</h1>
-
 <h2><%= @name %></h2>
+<div class="jumbotron mt-5">
+  <h1 class="display-4"><%= t('welcome') %></h1>
+  <p class="lead"><%= t('msg_entry') %></p>
+  <hr class="my-4">
+  <p><%= t('msg_start') %></p>
+  <p class="lead">
+    <%= link_to t('btn_coins'), coins_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to t('btn_types'), mining_types_path, class: "btn btn-primary btn-lg" %>
+  </p>
+</div>
 
-<h3>Aqui é outra forma de pegar a data -> Utilizando o helper l <%= l Time.now, format: :short %></h3>
+<h3><%= l Time.now, format: :short %></h3>
 <p>Idioma da aplicação: <strong><%= I18n.locale %></strong></p>
-<h3>Seja bem vindo, hoje é dia <%= l Date.today %></h3>
 
 <%# Usando um partial %>
-<%= render "menu" %>
+<%#= render "menu" %>
 
-<p>Você está em ambiente de <strong><%= ambient_rails %></strong></p>
+<p> <%= t('msg_environment') %> <strong><%= ambient_rails %></strong></p>

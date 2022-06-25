@@ -2,6 +2,7 @@
   "name": "crypto_wallet",
   "private": true,
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "jquery": "^3.6.0",
     "notify-js-legacy": "^0.4.1"
   },

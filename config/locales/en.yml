@@ -31,3 +31,11 @@
 
 en:
   hello: "Hello world"
+  welcome: "Welcome!"
+  msg_entry: "This is Crypto Wallet, your app to track digital currencies"
+  msg_start: "To get started select one of the options below"
+  msg_environment: "You are in an environment"
+  btn_types: "Mining Types"
+  btn_create_type: "New mining type"
+  btn_coins: "Coins"
+  bnt_create_coin: "New Coin"

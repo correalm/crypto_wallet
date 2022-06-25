@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Mining Types</h1>
+<h1><%= @mining_types.model_name.human(count: @mining_types.count) %></h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th><%= @mining_types.human_attribute_name(:description) %></th>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Mining Type', new_mining_type_path %>
+<%= link_to t('btn_create_type'), new_mining_type_path, class: "btn btn-primary btn-lg" %>

@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %> 
     <%# Aqui é importante para dizer o asset específico do controller em questão, já que cada controller é um resource %>
     <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,19 +14,29 @@
   </head>
 
   <body>
-  <h1>Cabeçalho</h1>
-    <span>
-      <%= link_to '🇧🇷', root_path(locale: "pt-BR")%>
-    </span>
-    <span>
-      <%= link_to '🇺🇸', '/?locale=en'%>
-    </span>
-    <%= yield %>
-    <%= link_to "HOME 🏠", root_path %>
-  <p>Footer</p>
+    <div class="container-fluid">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <%= link_to "HOME 🏠", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to '🇺🇸', '/?locale=en', class: "nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to '🇧🇷', root_path(locale: "pt-BR"), class: "nav-link"%>
+        </li>
+      </ul>
+      <%= yield %>
+    </div>
+    <footer style="position:absolute;bottom:0" class="container-fluid text-center text-lg-start bg-light text-muted">
+      <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2021 Copyright: Miguel
+        <a class="text-reset fw-bold" href="https://github.com/correalm">correalm</a>
+      </div>
+    </footer>
 
-  <script>
-    $.notify("Tudo ok...", "success");
-  </script>
+    <script>
+      // $.notify("Tudo ok...", "success");
+    </script>
   </body>
 </html>
